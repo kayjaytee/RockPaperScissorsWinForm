@@ -1,4 +1,4 @@
-﻿namespace LoginDemo
+﻿namespace RockPaperScissorsWinForm
 {
     partial class Form2
     {

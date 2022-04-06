@@ -1,7 +1,7 @@
 ﻿
 
 
-namespace LoginDemo
+namespace RockPaperScissorsWinForm
 {
     public partial class Form1
     {

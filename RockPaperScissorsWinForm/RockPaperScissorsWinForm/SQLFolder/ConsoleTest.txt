@@ -1,0 +1,38 @@
+﻿internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Connect to Database
+            MessageDatabaseConnection msgDB = new MessageDatabaseConnection
+            ("Server=localhost;Database=MessageDB;Trusted_Connection=True;");
+
+            //Retrieve Users
+            var users = msgDB.RunQuery<User>(User.SqlAll());
+
+            //Print Users
+            foreach (var user in users)
+            {
+                Console.WriteLine(user.FirstName);
+            }
+
+            //Create new User
+            var unique = DateTime.Now.Ticks;
+            var newUser = new User
+                (
+                1 + unique, //Not sure what to put here; needs to be value anyhow
+                "Username_" + unique,
+                "firstname_" + unique,
+                "lastname_" + unique,
+                "myhashedpassword",
+                null,
+                null
+                );
+
+            msgDB.ExecuteNoneQuery(User.SqlAdd(newUser));
+
+
+            //Get User
+            (string, List<SqlParameter>) tupel = User.SqlUser("hamster_firelord", "badass");
+            var filteredUsers = msgDB.RunQuery<User>(tupel);
+        }
+    }
