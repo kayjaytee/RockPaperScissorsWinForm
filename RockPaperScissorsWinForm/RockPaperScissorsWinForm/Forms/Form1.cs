@@ -11,7 +11,7 @@ namespace RockPaperScissorsWinForm
     public partial class Form1 : Form
     {
 
-        //string connectionString
+        string connectionstring = "Server=localhost;Database=RockPaperScissor;Trusted_Connection=True";
         public Form1()
         {
         
@@ -41,7 +41,7 @@ namespace RockPaperScissorsWinForm
                 {
 
                     using (SqlConnection connect = new SqlConnection //Öppnar koppling till SQL Server
-                    ("Server=localhost; Database=RockPaperScissor;Trusted_Connection=True"))
+                    (connectionstring))
                     {
                         connect.Open();
 

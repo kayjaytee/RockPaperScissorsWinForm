@@ -16,6 +16,8 @@ namespace RockPaperScissorsWinForm
         {
             public string Initiate { get; set; }
 
+            string connectionstring = "Server=localhost;Database=RockPaperScissor;Trusted_Connection=True";
+
             public Form2(string Initiate)
             {
                 InitializeComponent();
@@ -33,7 +35,7 @@ namespace RockPaperScissorsWinForm
                 {
 
                 using (SqlConnection connect = new SqlConnection
-                ("Server=localhost;Database=RockPaperScissor;Trusted_Connection=True;")) //Öppnar koppling till SQL Server
+                (connectionstring)) //Öppnar koppling till SQL Server
                 {
                     connect.Open();
 

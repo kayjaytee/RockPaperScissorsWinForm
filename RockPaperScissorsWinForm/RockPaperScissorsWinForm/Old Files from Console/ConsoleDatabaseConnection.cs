@@ -53,8 +53,8 @@ namespace RockPaperScissorsWinForm
         public static (string, List<SqlParameter>) SqlLogin(string username, string passwordhash)
         {
             List<SqlParameter> parameterValues = new List<SqlParameter>();
-            parameterValues.Add(DatabaseConnection.GetParameter("@username", username));
-            parameterValues.Add(DatabaseConnection.GetParameter("@passwordhash", passwordhash));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@username", username));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@passwordhash", passwordhash));
             string selectSql = baseSelectSQL + " where Username = @username and Passwordhash = @passwordhash";
             return (selectSql, parameterValues);
         }
@@ -73,16 +73,16 @@ namespace RockPaperScissorsWinForm
         public static (string, List<SqlParameter>) SqlAdd(User user)
         {
             List<SqlParameter> parameterValues = new List<SqlParameter>();
-            parameterValues.Add(DatabaseConnection.GetParameter("@Username", user.Username));
-            parameterValues.Add(DatabaseConnection.GetParameter("@FirstName", user.FirstName));
-            parameterValues.Add(DatabaseConnection.GetParameter("@LastName", user.LastName));
-            parameterValues.Add(DatabaseConnection.GetParameter("@UserEmail", user.UserEmail));
-            parameterValues.Add(DatabaseConnection.GetParameter("@PasswordHash", user.PasswordHash));
-            parameterValues.Add(DatabaseConnection.GetParameter("@Token", "NA"));
-            parameterValues.Add(DatabaseConnection.GetParameter("@TokenIssued", "2000-01-01"));
-            parameterValues.Add(DatabaseConnection.GetParameter("@Wins", 0));
-            parameterValues.Add(DatabaseConnection.GetParameter("@Losses", 0));
-            parameterValues.Add(DatabaseConnection.GetParameter("@GamesPlayed", 0));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@Username", user.Username));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@FirstName", user.FirstName));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@LastName", user.LastName));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@UserEmail", user.UserEmail));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@PasswordHash", user.PasswordHash));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@Token", "NA"));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@TokenIssued", "2000-01-01"));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@Wins", 0));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@Losses", 0));
+            parameterValues.Add(ConsoleDatabaseConnection.GetParameter("@GamesPlayed", 0));
 
             return (@"insert into [User]
                   ([Username],[FirstName],[LastName],[PasswordHash],[Token],[TokenIssued],[Wins],[Losses],[GamesPlayed])
@@ -91,11 +91,11 @@ namespace RockPaperScissorsWinForm
         }
 
     }
-    public class DatabaseConnection
+    public class ConsoleDatabaseConnection
     {
         public string ConnectionString { get; }
 
-        public DatabaseConnection(string connectionString)
+        public ConsoleDatabaseConnection(string connectionString)
         {
             ConnectionString = connectionString;
         }
