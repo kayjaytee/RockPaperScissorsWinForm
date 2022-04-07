@@ -10,6 +10,8 @@ namespace RockPaperScissorsWinForm
 {
     public partial class Form1 : Form
     {
+
+        //string connectionString
         public Form1()
         {
         
@@ -35,7 +37,7 @@ namespace RockPaperScissorsWinForm
             }
             else
             {
-                try //Denna kan troligtvis ersättas av DatabaseConnection.cs's färdiga metoder
+                try
                 {
 
                     using (SqlConnection connect = new SqlConnection //Öppnar koppling till SQL Server
@@ -87,7 +89,7 @@ namespace RockPaperScissorsWinForm
         private void Form2_Load(object sender, EventArgs e)
         {
             Form2 form2 = new Form2("");
-            form2.initiate = "";
+            form2.Initiate = "";
             form2.ShowDialog(this);
         }
 

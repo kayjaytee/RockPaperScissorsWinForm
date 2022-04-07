@@ -36,10 +36,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.CreateNewUserButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -91,11 +92,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(379, 212);
+            this.label6.Location = new System.Drawing.Point(407, 212);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 20);
+            this.label6.Size = new System.Drawing.Size(52, 20);
             this.label6.TabIndex = 5;
-            this.label6.Text = "E-Mail(unfinished)";
+            this.label6.Text = "E-Mail";
             // 
             // FirstNameTextBox
             // 
@@ -111,12 +112,12 @@
             this.LastNameTextBox.Size = new System.Drawing.Size(209, 27);
             this.LastNameTextBox.TabIndex = 7;
             // 
-            // UsernameTextBox
+            // UserNameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(127, 209);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(214, 27);
-            this.UsernameTextBox.TabIndex = 8;
+            this.UserNameTextBox.Location = new System.Drawing.Point(127, 209);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(214, 27);
+            this.UserNameTextBox.TabIndex = 8;
             // 
             // PasswordTextBox
             // 
@@ -145,15 +146,23 @@
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.Location = new System.Drawing.Point(492, 209);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(209, 27);
+            this.EmailTextBox.TabIndex = 12;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.CreateNewUserButton);
             this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.UsernameTextBox);
+            this.Controls.Add(this.UserNameTextBox);
             this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.label6);
@@ -164,6 +173,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Create New User";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,9 +189,10 @@
         private Label label6;
         private TextBox FirstNameTextBox;
         private TextBox LastNameTextBox;
-        private TextBox UsernameTextBox;
+        private TextBox UserNameTextBox;
         private TextBox PasswordTextBox;
         private Button CreateNewUserButton;
         private Button CancelButton;
+        private TextBox EmailTextBox;
     }
 }
