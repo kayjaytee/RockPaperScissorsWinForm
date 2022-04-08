@@ -60,6 +60,7 @@ namespace RockPaperScissorsWinForm
                                     if (datatable.Rows.Count > 0)
                                     {
                                         MessageBox.Show("Login Successfull");
+                                        Form3_Load(sender, e);
                                     }
                                     else
                                     {
@@ -86,11 +87,19 @@ namespace RockPaperScissorsWinForm
 
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e) //User Creation Window
         {
             Form2 form2 = new Form2("");
             form2.Initiate = "";
             form2.ShowDialog(this);
+        }
+
+        private void Form3_Load(object sender, EventArgs e) //After Login: Lobby Window
+        {
+            
+            Form3 form3 = new Form3("");
+            form3.Initiate = "";
+            form3.ShowDialog(this);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

@@ -120,6 +120,7 @@
             this.richStatisticsTextBox.Size = new System.Drawing.Size(337, 324);
             this.richStatisticsTextBox.TabIndex = 12;
             this.richStatisticsTextBox.Text = "";
+            this.richStatisticsTextBox.TextChanged += new System.EventHandler(this.richStatisticsTextBox_TextChanged);
             // 
             // Form3
             // 
