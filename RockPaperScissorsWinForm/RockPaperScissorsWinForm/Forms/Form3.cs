@@ -33,5 +33,14 @@ namespace RockPaperScissorsWinForm
           
         }
 
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void HostGameButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

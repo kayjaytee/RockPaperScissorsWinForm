@@ -30,11 +30,11 @@
         {
             this.listUserOnline = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.HostGameButton = new System.Windows.Forms.Button();
             this.listGamesOpen = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.JoinGameButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.richStatisticsTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
@@ -58,14 +58,15 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "All Your Friends :D";
             // 
-            // button1
+            // HostGameButton
             // 
-            this.button1.Location = new System.Drawing.Point(112, 431);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 43);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "HOST GAME";
-            this.button1.UseVisualStyleBackColor = true;
+            this.HostGameButton.Location = new System.Drawing.Point(112, 431);
+            this.HostGameButton.Name = "HostGameButton";
+            this.HostGameButton.Size = new System.Drawing.Size(268, 43);
+            this.HostGameButton.TabIndex = 5;
+            this.HostGameButton.Text = "HOST GAME";
+            this.HostGameButton.UseVisualStyleBackColor = true;
+            this.HostGameButton.Click += new System.EventHandler(this.HostGameButton_Click);
             // 
             // listGamesOpen
             // 
@@ -86,23 +87,24 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "games open";
             // 
-            // button2
+            // JoinGameButton
             // 
-            this.button2.Location = new System.Drawing.Point(417, 431);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 43);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "JOIN GAME";
-            this.button2.UseVisualStyleBackColor = true;
+            this.JoinGameButton.Location = new System.Drawing.Point(417, 431);
+            this.JoinGameButton.Name = "JoinGameButton";
+            this.JoinGameButton.Size = new System.Drawing.Size(268, 43);
+            this.JoinGameButton.TabIndex = 9;
+            this.JoinGameButton.Text = "JOIN GAME";
+            this.JoinGameButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // LogOutButton
             // 
-            this.button3.Location = new System.Drawing.Point(714, 431);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(268, 43);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "LOGOUT";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LogOutButton.Location = new System.Drawing.Point(714, 431);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(268, 43);
+            this.LogOutButton.TabIndex = 10;
+            this.LogOutButton.Text = "LOGOUT";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // label1
             // 
@@ -129,11 +131,11 @@
             this.ClientSize = new System.Drawing.Size(1165, 531);
             this.Controls.Add(this.richStatisticsTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.LogOutButton);
+            this.Controls.Add(this.JoinGameButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listGamesOpen);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HostGameButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listUserOnline);
             this.Name = "Form3";
@@ -147,11 +149,11 @@
         #endregion
         private ListBox listUserOnline;
         private Label label2;
-        private Button button1;
+        private Button HostGameButton;
         private ListBox listGamesOpen;
         private Label label3;
-        private Button button2;
-        private Button button3;
+        private Button JoinGameButton;
+        private Button LogOutButton;
         private Label label1;
         private RichTextBox richStatisticsTextBox;
     }

@@ -78,6 +78,7 @@ namespace RockPaperScissorsWinForm
                 catch (Exception ex)
                 {
                     MessageBox.Show("" + ex.Message);
+
                 }
             }
         }
