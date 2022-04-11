@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listUserOnline = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.HostGameButton = new System.Windows.Forms.Button();
@@ -36,7 +37,13 @@
             this.JoinGameButton = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.richStatisticsTextBox = new System.Windows.Forms.RichTextBox();
+            this.dataGridViewStatistics = new System.Windows.Forms.DataGridView();
+            this.consoleDatabaseConnectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consoleDatabaseConnectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // listUserOnline
@@ -115,21 +122,44 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Statistics";
             // 
-            // richStatisticsTextBox
+            // dataGridViewStatistics
             // 
-            this.richStatisticsTextBox.Location = new System.Drawing.Point(391, 60);
-            this.richStatisticsTextBox.Name = "richStatisticsTextBox";
-            this.richStatisticsTextBox.Size = new System.Drawing.Size(337, 324);
-            this.richStatisticsTextBox.TabIndex = 12;
-            this.richStatisticsTextBox.Text = "";
-            this.richStatisticsTextBox.TextChanged += new System.EventHandler(this.richStatisticsTextBox_TextChanged);
+            this.dataGridViewStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStatistics.Location = new System.Drawing.Point(373, 83);
+            this.dataGridViewStatistics.Name = "dataGridViewStatistics";
+            this.dataGridViewStatistics.RowHeadersWidth = 51;
+            this.dataGridViewStatistics.RowTemplate.Height = 29;
+            this.dataGridViewStatistics.Size = new System.Drawing.Size(300, 188);
+            this.dataGridViewStatistics.TabIndex = 12;
+            // 
+            // consoleDatabaseConnectionBindingSource
+            // 
+            this.consoleDatabaseConnectionBindingSource.DataSource = typeof(RockPaperScissorsWinForm.ConsoleDatabaseConnection);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(391, 280);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(150, 104);
+            this.listBox1.TabIndex = 13;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(547, 280);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDown1.TabIndex = 14;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 531);
-            this.Controls.Add(this.richStatisticsTextBox);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.dataGridViewStatistics);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.JoinGameButton);
@@ -141,6 +171,9 @@
             this.Name = "Form3";
             this.Text = "Lobby";
             this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consoleDatabaseConnectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +188,9 @@
         private Button JoinGameButton;
         private Button LogOutButton;
         private Label label1;
-        private RichTextBox richStatisticsTextBox;
+        private DataGridView dataGridViewStatistics;
+        private BindingSource consoleDatabaseConnectionBindingSource;
+        private ListBox listBox1;
+        private NumericUpDown numericUpDown1;
     }
 }

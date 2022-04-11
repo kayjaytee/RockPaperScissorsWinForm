@@ -18,7 +18,10 @@ namespace RockPaperScissorsWinForm
         string userEmail,
         string passwordHash,
         string token,
-        DateTime? tokenIssued)
+        DateTime? tokenIssued,
+        long wins,
+        long losses,
+        long gamesPlayed)
         {
             UserID = userID;
             Username = username;
@@ -28,6 +31,9 @@ namespace RockPaperScissorsWinForm
             PasswordHash = passwordHash;
             Token = token;
             TokenIssued = tokenIssued;
+            Wins = wins;
+            Losses = losses;
+            GamesPlayed = gamesPlayed;
 
         }
 

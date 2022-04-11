@@ -16,6 +16,8 @@ namespace RockPaperScissorsWinForm.Forms
     public partial class Form4 : Form
     {
 
+        int rounds
+
         private StreamReader strReader;
         private StreamWriter strWriter;
         private string recieve;

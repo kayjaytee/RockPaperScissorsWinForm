@@ -13,6 +13,7 @@ namespace RockPaperScissorsWinForm
 {
     public partial class Form3 : Form
     {
+        List <User> User {  get; set; }
 
         public string Initiate { get; set; }
 
@@ -20,17 +21,30 @@ namespace RockPaperScissorsWinForm
 
         public Form3(string Initiate)
         {
+            User = GetUsersStats();
             InitializeComponent();
+        }
+
+        private List<User> GetUsersStats()
+        {
+            var list = new List<User>();
+            list.Add(new User()
+            {
+                Username = "Person 1",
+                Wins = 0,
+                Losses = 0,
+                GamesPlayed = 0
+            });
+
+            return list;
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            var user = this.User;
 
-        }
-
-        private void richStatisticsTextBox_TextChanged(object sender, EventArgs e)
-        {
-          
+            dataGridViewStatistics.DataSource = user;
+            dataGridViewStatistics.Columns["[UserName]"].Visible = true;
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -42,5 +56,17 @@ namespace RockPaperScissorsWinForm
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

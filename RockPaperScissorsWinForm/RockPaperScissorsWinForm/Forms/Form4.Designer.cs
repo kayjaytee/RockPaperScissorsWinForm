@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             this.richChatTextBox.Location = new System.Drawing.Point(662, 399);
             this.richChatTextBox.Name = "richChatTextBox";
-            this.richChatTextBox.Size = new System.Drawing.Size(482, 126);
+            this.richChatTextBox.Size = new System.Drawing.Size(482, 112);
             this.richChatTextBox.TabIndex = 1;
             this.richChatTextBox.Text = "";
             // 
@@ -150,11 +151,20 @@
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(237, 402);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 20);
+            this.label5.TabIndex = 12;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 537);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button4);
@@ -190,5 +200,6 @@
         private Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private Label label5;
     }
 }
