@@ -28,13 +28,13 @@ namespace RockPaperScissorsWinForm
         private List<User> GetUsersStats()
         {
             var list = new List<User>();
-            list.Add(new User()
+            /*list.Add(new User()
             {
                 Username = "Person 1",
                 Wins = 0,
                 Losses = 0,
                 GamesPlayed = 0
-            });
+            });*/
 
             return list;
         }

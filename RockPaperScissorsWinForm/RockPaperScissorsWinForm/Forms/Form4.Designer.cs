@@ -34,9 +34,9 @@
             this.SendMessageTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.chooseRockButton = new System.Windows.Forms.Button();
+            this.choosePaperButton = new System.Windows.Forms.Button();
+            this.chooseScissorButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -47,7 +47,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.Location = new System.Drawing.Point(237, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(620, 381);
@@ -98,32 +98,35 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Send Message";
             // 
-            // button2
+            // chooseRockButton
             // 
-            this.button2.Location = new System.Drawing.Point(70, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "ROCK";
-            this.button2.UseVisualStyleBackColor = true;
+            this.chooseRockButton.Location = new System.Drawing.Point(70, 108);
+            this.chooseRockButton.Name = "chooseRockButton";
+            this.chooseRockButton.Size = new System.Drawing.Size(94, 29);
+            this.chooseRockButton.TabIndex = 7;
+            this.chooseRockButton.Text = "ROCK";
+            this.chooseRockButton.UseVisualStyleBackColor = true;
+            this.chooseRockButton.Click += new System.EventHandler(this.chooseRockButton_Click);
             // 
-            // button3
+            // choosePaperButton
             // 
-            this.button3.Location = new System.Drawing.Point(70, 143);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "PAPER";
-            this.button3.UseVisualStyleBackColor = true;
+            this.choosePaperButton.Location = new System.Drawing.Point(70, 143);
+            this.choosePaperButton.Name = "choosePaperButton";
+            this.choosePaperButton.Size = new System.Drawing.Size(94, 29);
+            this.choosePaperButton.TabIndex = 8;
+            this.choosePaperButton.Text = "PAPER";
+            this.choosePaperButton.UseVisualStyleBackColor = true;
+            this.choosePaperButton.Click += new System.EventHandler(this.choosePaperButton_Click);
             // 
-            // button4
+            // chooseScissorButton
             // 
-            this.button4.Location = new System.Drawing.Point(70, 178);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "SCISSOR";
-            this.button4.UseVisualStyleBackColor = true;
+            this.chooseScissorButton.Location = new System.Drawing.Point(70, 178);
+            this.chooseScissorButton.Name = "chooseScissorButton";
+            this.chooseScissorButton.Size = new System.Drawing.Size(94, 29);
+            this.chooseScissorButton.TabIndex = 9;
+            this.chooseScissorButton.Text = "SCISSOR";
+            this.chooseScissorButton.UseVisualStyleBackColor = true;
+            this.chooseScissorButton.Click += new System.EventHandler(this.chooseScissorButton_Click);
             // 
             // label3
             // 
@@ -167,9 +170,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.chooseScissorButton);
+            this.Controls.Add(this.choosePaperButton);
+            this.Controls.Add(this.chooseRockButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SendMessageTextBox);
@@ -193,9 +196,9 @@
         private TextBox SendMessageTextBox;
         private Label label1;
         private Label label2;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button chooseRockButton;
+        private Button choosePaperButton;
+        private Button chooseScissorButton;
         private Label label3;
         private Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

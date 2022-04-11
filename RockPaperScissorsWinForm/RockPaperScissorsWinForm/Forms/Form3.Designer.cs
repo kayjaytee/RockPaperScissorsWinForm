@@ -39,11 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewStatistics = new System.Windows.Forms.DataGridView();
             this.consoleDatabaseConnectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consoleDatabaseConnectionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // listUserOnline
@@ -136,29 +133,11 @@
             // 
             this.consoleDatabaseConnectionBindingSource.DataSource = typeof(RockPaperScissorsWinForm.ConsoleDatabaseConnection);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(391, 280);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(150, 104);
-            this.listBox1.TabIndex = 13;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(547, 280);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(150, 27);
-            this.numericUpDown1.TabIndex = 14;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 531);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridViewStatistics);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogOutButton);
@@ -173,7 +152,6 @@
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStatistics)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consoleDatabaseConnectionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,7 +168,5 @@
         private Label label1;
         private DataGridView dataGridViewStatistics;
         private BindingSource consoleDatabaseConnectionBindingSource;
-        private ListBox listBox1;
-        private NumericUpDown numericUpDown1;
     }
 }

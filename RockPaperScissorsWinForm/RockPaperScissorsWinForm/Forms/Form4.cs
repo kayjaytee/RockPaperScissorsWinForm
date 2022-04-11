@@ -16,7 +16,6 @@ namespace RockPaperScissorsWinForm.Forms
     public partial class Form4 : Form
     {
 
-        int rounds
 
         private StreamReader strReader;
         private StreamWriter strWriter;
@@ -91,6 +90,21 @@ namespace RockPaperScissorsWinForm.Forms
                 backgroundWorker2.RunWorkerAsync();
             }
             SendMessageTextBox.Text = "";
+        }
+
+        private void chooseRockButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void choosePaperButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chooseScissorButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
