@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RockPaperScissorsWinForm": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\K-J\\Documents\\GitHub\\RockPaperScissorsWinForm\\RockPaperScissorsWinForm\\RockPaperScissorsWinForm"
+    }
+  }
+}
