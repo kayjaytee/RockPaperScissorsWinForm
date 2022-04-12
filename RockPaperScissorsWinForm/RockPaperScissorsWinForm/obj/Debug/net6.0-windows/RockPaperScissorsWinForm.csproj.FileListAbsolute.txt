@@ -24,9 +24,9 @@ C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\obj\Debug\net6.0-windows\RockPaperScissorsWinForm.Form1.resources
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\obj\Debug\net6.0-windows\RockPaperScissorsWinForm.Form2.resources
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\obj\Debug\net6.0-windows\RockPaperScissorsWinForm.Form3.resources
-C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\obj\Debug\net6.0-windows\RockPaperScissorsWinForm.Forms.Form4.resources
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\bin\Debug\net6.0-windows\xunit.abstractions.dll
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\bin\Debug\net6.0-windows\xunit.assert.dll
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\bin\Debug\net6.0-windows\xunit.core.dll
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\bin\Debug\net6.0-windows\xunit.execution.dotnet.dll
 C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\obj\Debug\net6.0-windows\RockPaperScissorsWinForm.Properties.Resources.resources
+C:\Users\K-J\Documents\GitHub\RockPaperScissorsWinForm\RockPaperScissorsWinForm\RockPaperScissorsWinForm\obj\Debug\net6.0-windows\RockPaperScissorsWinForm.Form4.resources

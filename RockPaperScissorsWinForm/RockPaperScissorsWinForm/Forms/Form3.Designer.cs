@@ -122,11 +122,11 @@
             // dataGridViewStatistics
             // 
             this.dataGridViewStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStatistics.Location = new System.Drawing.Point(373, 83);
+            this.dataGridViewStatistics.Location = new System.Drawing.Point(373, 60);
             this.dataGridViewStatistics.Name = "dataGridViewStatistics";
             this.dataGridViewStatistics.RowHeadersWidth = 51;
             this.dataGridViewStatistics.RowTemplate.Height = 29;
-            this.dataGridViewStatistics.Size = new System.Drawing.Size(300, 188);
+            this.dataGridViewStatistics.Size = new System.Drawing.Size(300, 324);
             this.dataGridViewStatistics.TabIndex = 12;
             // 
             // consoleDatabaseConnectionBindingSource

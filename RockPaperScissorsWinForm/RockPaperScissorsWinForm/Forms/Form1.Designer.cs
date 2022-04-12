@@ -80,6 +80,7 @@ namespace RockPaperScissorsWinForm
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(171, 204);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(364, 27);
             this.PasswordTextBox.TabIndex = 4;
             // 

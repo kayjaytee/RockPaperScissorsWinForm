@@ -18,10 +18,9 @@ namespace RockPaperScissorsWinForm
 
             string connectionstring = "Server=localhost;Database=RockPaperScissor;Trusted_Connection=True";
 
-            public Form2(string Initiate)
+            public Form2(string initiate)
             {
                 InitializeComponent();
-                this.Initiate = Initiate;
             }
 
             private void CancelButton_Click(object sender, EventArgs e)

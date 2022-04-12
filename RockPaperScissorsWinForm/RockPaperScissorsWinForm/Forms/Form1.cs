@@ -1,7 +1,3 @@
-using System;
-using System.Windows.Forms;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -12,11 +8,10 @@ namespace RockPaperScissorsWinForm
     {
 
         string connectionstring = "Server=localhost;Database=RockPaperScissor;Trusted_Connection=True";
+
         public Form1()
         {
-        
             InitializeComponent();
-           
 
         }
 
@@ -27,6 +22,7 @@ namespace RockPaperScissorsWinForm
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
+            long userId = 0;
             if (UserNameTextBox.Text == "")
             {
                 MessageBox.Show("Enter your Username, please");
@@ -50,7 +46,7 @@ namespace RockPaperScissorsWinForm
                         {
                             cmd.Parameters.AddWithValue("@username", UserNameTextBox.Text);
                             cmd.Parameters.AddWithValue("@passwordhash", PasswordTextBox.Text);
-                        
+
                             using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                             { //Datatable tillåter hämtning och formgivning av databasen; adapter är bryggan för att kommunikationen ska fungera.
                                 using (DataTable datatable = new DataTable())
@@ -59,8 +55,9 @@ namespace RockPaperScissorsWinForm
 
                                     if (datatable.Rows.Count > 0)
                                     {
+                                        userId = Convert.ToInt32(datatable.Rows[0].Field<long>(0));
                                         MessageBox.Show("Login Successfull");
-                                        Form3_Load(sender, e);
+                                        Form3_Load(sender, e, userId);
                                     }
                                     else
                                     {
@@ -69,12 +66,12 @@ namespace RockPaperScissorsWinForm
                                 }
                             }
                         }
-                       
+
                         connect.Close();
-                    }     
-                        
-                } 
-                
+                    }
+
+                }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("" + ex.Message);
@@ -95,11 +92,9 @@ namespace RockPaperScissorsWinForm
             form2.ShowDialog(this);
         }
 
-        private void Form3_Load(object sender, EventArgs e) //After Login: Lobby Window
+        private void Form3_Load(object sender, EventArgs e, long userID) //After Login: Lobby Window
         {
-            
-            Form3 form3 = new Form3("");
-            form3.Initiate = "";
+            Form3 form3 = new Form3(userID);
             form3.ShowDialog(this);
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -11,23 +12,22 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 
-namespace RockPaperScissorsWinForm.Forms
+namespace RockPaperScissorsWinForm
 {
     public partial class Form4 : Form
     {
-
-
+        private SqlConnection connect = new SqlConnection();
         private StreamReader strReader;
         private StreamWriter strWriter;
         private string recieve;
         private string textToSend;
 
-        public Form4()
+        public Form4(long loggedInUserID)
         {
             InitializeComponent();
 
-            //strReader = new StreamReader(/*THIS ROOM*/);
-            //strWriter = new StreamWriter(/*THIS ROOM*/);
+            strReader = new StreamReader(loggedInUserID.ToString());
+            strWriter = new StreamWriter(loggedInUserID.ToString());
             strWriter.AutoFlush = true;
             backgroundWorker1.RunWorkerAsync();
             backgroundWorker2.WorkerSupportsCancellation = true;
@@ -35,6 +35,7 @@ namespace RockPaperScissorsWinForm.Forms
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            using ()
 
         }
 
@@ -43,9 +44,10 @@ namespace RockPaperScissorsWinForm.Forms
 
         }
 
+
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            while(/*USER*/true)
+            /*while(true)
             {
                 try
                 {
@@ -60,12 +62,12 @@ namespace RockPaperScissorsWinForm.Forms
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
-            }
+            }*/
         }
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (/*USER*/true)
+            /*if (true)
             {
 
                 strWriter.WriteLine(textToSend);
@@ -79,7 +81,7 @@ namespace RockPaperScissorsWinForm.Forms
                 MessageBox.Show("Sending Failed");
             }
 
-            backgroundWorker2.CancelAsync();
+            backgroundWorker2.CancelAsync();*/
         }
 
         private void SendMessageButton_Click(object sender, EventArgs e)

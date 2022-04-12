@@ -1,4 +1,4 @@
-﻿namespace RockPaperScissorsWinForm.Forms
+﻿namespace RockPaperScissorsWinForm
 {
     partial class Form4
     {
