@@ -22,26 +22,32 @@ namespace RockPaperScissorsWinForm
         private string recieve;
         private string textToSend;
 
+
+        string[] moves = new string[3]
+        { "scissors", "papers", "rock" };
+        string playerOneMove = "", playerTwoMove = "";
+
+
         public Form4(long loggedInUserID)
         {
             InitializeComponent();
 
-            strReader = new StreamReader(loggedInUserID.ToString());
-            strWriter = new StreamWriter(loggedInUserID.ToString());
-            strWriter.AutoFlush = true;
-            backgroundWorker1.RunWorkerAsync();
-            backgroundWorker2.WorkerSupportsCancellation = true;
+        }
+
+        private void PlayerOneChoice(object sender, EventArgs e)
+        {
+
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            using ()
+       
 
         }
 
         private void SendMessageTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -67,21 +73,21 @@ namespace RockPaperScissorsWinForm
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
-            /*if (true)
-            {
+            //if ()
+            //{
 
-                strWriter.WriteLine(textToSend);
-                this.SendMessageTextBox.Invoke(new MethodInvoker(delegate ()
-                {
-                    SendMessageTextBox.AppendText("You: " + textToSend + "\n");
-                }));
-            }
-            else
-            {
-                MessageBox.Show("Sending Failed");
-            }
+            //    strWriter.WriteLine(textToSend);
+            //    this.SendMessageTextBox.Invoke(new MethodInvoker(delegate ()
+            //    {
+            //        richChatTextBox.AppendText("You: " + textToSend + "\n");
+            //    }));
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sending Failed");
+            //}
 
-            backgroundWorker2.CancelAsync();*/
+            //backgroundWorker2.CancelAsync();
         }
 
         private void SendMessageButton_Click(object sender, EventArgs e)
@@ -96,17 +102,29 @@ namespace RockPaperScissorsWinForm
 
         private void chooseRockButton_Click(object sender, EventArgs e)
         {
-
+            playerOneMove = "rock";
+            picLeftHidden.Visible = false;
+            picLeftPaper.Visible = false;
+            picLeftRock.Visible = true;
+            picLeftScissor.Visible = false;
         }
 
         private void choosePaperButton_Click(object sender, EventArgs e)
         {
-
+            playerOneMove = "paper";
+            picLeftHidden.Visible = false;
+            picLeftPaper.Visible = true;
+            picLeftRock.Visible = false;
+            picLeftScissor.Visible = false;
         }
 
         private void chooseScissorButton_Click(object sender, EventArgs e)
         {
-
+            playerOneMove = "scissor";
+            picLeftHidden.Visible = false;
+            picLeftPaper.Visible = false;
+            picLeftRock.Visible = false;
+            picLeftScissor.Visible = true;
         }
     }
 }

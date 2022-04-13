@@ -19,7 +19,7 @@
             var unique = DateTime.Now.Ticks;
             var newUser = new User
                 (
-                1 + unique, //Not sure what to put here; needs to be value anyhow
+                1 + unique,
                 "Username_" + unique,
                 "firstname_" + unique,
                 "lastname_" + unique,

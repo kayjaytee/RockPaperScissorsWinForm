@@ -73,6 +73,16 @@ namespace RockPaperScissorsWinForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paper_hand1 {
+            get {
+                object obj = ResourceManager.GetObject("paper_hand1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rock_hand {
             get {
                 object obj = ResourceManager.GetObject("rock_hand", resourceCulture);

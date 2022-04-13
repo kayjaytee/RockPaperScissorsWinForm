@@ -39,6 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewStatistics = new System.Windows.Forms.DataGridView();
             this.consoleDatabaseConnectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelUserIDDisplay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consoleDatabaseConnectionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,9 +60,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(12, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 28);
+            this.label2.Size = new System.Drawing.Size(74, 28);
             this.label2.TabIndex = 4;
-            this.label2.Text = "All Your Friends :D";
+            this.label2.Text = "Online";
             // 
             // HostGameButton
             // 
@@ -87,9 +89,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(797, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 28);
+            this.label3.Size = new System.Drawing.Size(131, 28);
             this.label3.TabIndex = 8;
-            this.label3.Text = "games open";
+            this.label3.Text = "Open Games";
             // 
             // JoinGameButton
             // 
@@ -113,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(391, 28);
+            this.label1.Location = new System.Drawing.Point(373, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 11;
@@ -133,11 +135,30 @@
             // 
             this.consoleDatabaseConnectionBindingSource.DataSource = typeof(RockPaperScissorsWinForm.ConsoleDatabaseConnection);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 396);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Your UserID:";
+            // 
+            // labelUserIDDisplay
+            // 
+            this.labelUserIDDisplay.AutoSize = true;
+            this.labelUserIDDisplay.Location = new System.Drawing.Point(107, 396);
+            this.labelUserIDDisplay.Name = "labelUserIDDisplay";
+            this.labelUserIDDisplay.Size = new System.Drawing.Size(0, 20);
+            this.labelUserIDDisplay.TabIndex = 14;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 531);
+            this.Controls.Add(this.labelUserIDDisplay);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridViewStatistics);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogOutButton);
@@ -168,5 +189,7 @@
         private Label label1;
         private DataGridView dataGridViewStatistics;
         private BindingSource consoleDatabaseConnectionBindingSource;
+        private Label label4;
+        private Label labelUserIDDisplay;
     }
 }

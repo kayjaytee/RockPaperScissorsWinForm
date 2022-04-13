@@ -45,7 +45,8 @@ namespace RockPaperScissorsWinForm
                         cmd.Parameters.AddWithValue("@UserName", UserNameTextBox.Text);
                         cmd.Parameters.AddWithValue("@FirstName", FirstNameTextBox.Text);
                         cmd.Parameters.AddWithValue("@LastName", LastNameTextBox.Text);
-                        cmd.Parameters.AddWithValue("@Passwordhash", PasswordTextBox.Text);
+                        cmd.Parameters.AddWithValue("@Password", PasswordTextBox.Text);
+                        cmd.Parameters.AddWithValue("@PasswordHash", "N/A");
                         cmd.Parameters.AddWithValue("@UserEmail", EmailTextBox.Text);
                         cmd.Parameters.AddWithValue("@Token", "N/A");
                         cmd.Parameters.AddWithValue("@TokenIssued", DateTime.Now);

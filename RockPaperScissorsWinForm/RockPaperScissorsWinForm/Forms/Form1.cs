@@ -42,10 +42,10 @@ namespace RockPaperScissorsWinForm
                         connect.Open();
 
                         using (SqlCommand cmd = new SqlCommand //Skickar en förfrågan till SQL Server
-                        ("SELECT * FROM [User] WHERE [UserName] = @username AND [PasswordHash] =  @passwordhash", connect))
+                        ("SELECT * FROM [User] WHERE [UserName] = @username AND [Password] =  @password", connect))
                         {
                             cmd.Parameters.AddWithValue("@username", UserNameTextBox.Text);
-                            cmd.Parameters.AddWithValue("@passwordhash", PasswordTextBox.Text);
+                            cmd.Parameters.AddWithValue("@password", PasswordTextBox.Text);
 
                             using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                             { //Datatable tillåter hämtning och formgivning av databasen; adapter är bryggan för att kommunikationen ska fungera.

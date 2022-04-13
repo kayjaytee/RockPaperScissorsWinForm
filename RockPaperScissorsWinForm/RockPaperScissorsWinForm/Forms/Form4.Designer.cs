@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.richChatTextBox = new System.Windows.Forms.RichTextBox();
             this.SendMessageButton = new System.Windows.Forms.Button();
             this.SendMessageTextBox = new System.Windows.Forms.TextBox();
@@ -42,17 +42,23 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picRightPaper = new System.Windows.Forms.PictureBox();
+            this.picLeftPaper = new System.Windows.Forms.PictureBox();
+            this.picLeftRock = new System.Windows.Forms.PictureBox();
+            this.picRightRock = new System.Windows.Forms.PictureBox();
+            this.picRightScissor = new System.Windows.Forms.PictureBox();
+            this.picLeftScissor = new System.Windows.Forms.PictureBox();
+            this.picRightHidden = new System.Windows.Forms.PictureBox();
+            this.picLeftHidden = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightPaper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftPaper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftRock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightRock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightScissor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftScissor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightHidden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftHidden)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Location = new System.Drawing.Point(237, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(620, 381);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // richChatTextBox
             // 
@@ -162,11 +168,105 @@
             this.label5.Size = new System.Drawing.Size(0, 20);
             this.label5.TabIndex = 12;
             // 
+            // picRightPaper
+            // 
+            this.picRightPaper.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picRightPaper.Image = global::RockPaperScissorsWinForm.Properties.Resources.paper_hand;
+            this.picRightPaper.Location = new System.Drawing.Point(594, 78);
+            this.picRightPaper.Name = "picRightPaper";
+            this.picRightPaper.Size = new System.Drawing.Size(251, 232);
+            this.picRightPaper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRightPaper.TabIndex = 14;
+            this.picRightPaper.TabStop = false;
+            // 
+            // picLeftPaper
+            // 
+            this.picLeftPaper.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picLeftPaper.Image = ((System.Drawing.Image)(resources.GetObject("picLeftPaper.Image")));
+            this.picLeftPaper.Location = new System.Drawing.Point(237, 78);
+            this.picLeftPaper.Name = "picLeftPaper";
+            this.picLeftPaper.Size = new System.Drawing.Size(251, 232);
+            this.picLeftPaper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLeftPaper.TabIndex = 15;
+            this.picLeftPaper.TabStop = false;
+            // 
+            // picLeftRock
+            // 
+            this.picLeftRock.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picLeftRock.Image = ((System.Drawing.Image)(resources.GetObject("picLeftRock.Image")));
+            this.picLeftRock.Location = new System.Drawing.Point(237, 78);
+            this.picLeftRock.Name = "picLeftRock";
+            this.picLeftRock.Size = new System.Drawing.Size(251, 232);
+            this.picLeftRock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLeftRock.TabIndex = 16;
+            this.picLeftRock.TabStop = false;
+            // 
+            // picRightRock
+            // 
+            this.picRightRock.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picRightRock.Image = global::RockPaperScissorsWinForm.Properties.Resources.rock_hand;
+            this.picRightRock.Location = new System.Drawing.Point(594, 78);
+            this.picRightRock.Name = "picRightRock";
+            this.picRightRock.Size = new System.Drawing.Size(251, 232);
+            this.picRightRock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRightRock.TabIndex = 17;
+            this.picRightRock.TabStop = false;
+            // 
+            // picRightScissor
+            // 
+            this.picRightScissor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picRightScissor.Image = global::RockPaperScissorsWinForm.Properties.Resources.scissor_hand;
+            this.picRightScissor.Location = new System.Drawing.Point(594, 78);
+            this.picRightScissor.Name = "picRightScissor";
+            this.picRightScissor.Size = new System.Drawing.Size(251, 232);
+            this.picRightScissor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRightScissor.TabIndex = 18;
+            this.picRightScissor.TabStop = false;
+            // 
+            // picLeftScissor
+            // 
+            this.picLeftScissor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picLeftScissor.Image = ((System.Drawing.Image)(resources.GetObject("picLeftScissor.Image")));
+            this.picLeftScissor.Location = new System.Drawing.Point(237, 78);
+            this.picLeftScissor.Name = "picLeftScissor";
+            this.picLeftScissor.Size = new System.Drawing.Size(251, 232);
+            this.picLeftScissor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLeftScissor.TabIndex = 19;
+            this.picLeftScissor.TabStop = false;
+            // 
+            // picRightHidden
+            // 
+            this.picRightHidden.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.picRightHidden.Location = new System.Drawing.Point(594, 78);
+            this.picRightHidden.Name = "picRightHidden";
+            this.picRightHidden.Size = new System.Drawing.Size(251, 232);
+            this.picRightHidden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRightHidden.TabIndex = 20;
+            this.picRightHidden.TabStop = false;
+            // 
+            // picLeftHidden
+            // 
+            this.picLeftHidden.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.picLeftHidden.Location = new System.Drawing.Point(237, 78);
+            this.picLeftHidden.Name = "picLeftHidden";
+            this.picLeftHidden.Size = new System.Drawing.Size(251, 232);
+            this.picLeftHidden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLeftHidden.TabIndex = 21;
+            this.picLeftHidden.TabStop = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 537);
+            this.Controls.Add(this.picLeftHidden);
+            this.Controls.Add(this.picRightHidden);
+            this.Controls.Add(this.picLeftScissor);
+            this.Controls.Add(this.picRightScissor);
+            this.Controls.Add(this.picRightRock);
+            this.Controls.Add(this.picLeftRock);
+            this.Controls.Add(this.picLeftPaper);
+            this.Controls.Add(this.picRightPaper);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -178,19 +278,23 @@
             this.Controls.Add(this.SendMessageTextBox);
             this.Controls.Add(this.SendMessageButton);
             this.Controls.Add(this.richChatTextBox);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Form4";
             this.Text = "Game ID";
             this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightPaper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftPaper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftRock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightRock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightScissor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftScissor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightHidden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftHidden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private RichTextBox richChatTextBox;
         private Button SendMessageButton;
         private TextBox SendMessageTextBox;
@@ -204,5 +308,13 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private Label label5;
+        private PictureBox picRightPaper;
+        private PictureBox picLeftPaper;
+        private PictureBox picLeftRock;
+        private PictureBox picRightRock;
+        private PictureBox picRightScissor;
+        private PictureBox picLeftScissor;
+        private PictureBox picRightHidden;
+        private PictureBox picLeftHidden;
     }
 }
